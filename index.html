@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey-Monkey</title>
+    <meta name="description" content="this is an website providing platfrom for you to conduct different surveys for different type of data and use it for improving sales,helping people and improving an product and lot of other things providing fast and innovitaive solution">
+    <meta name="keywords" content="amazingsurveytool dataanalytics largestsurveyplatform survey surveyform">
+    <meta name="author" content="akashsuri akhil akashdeep akashchaduary">
+    <link rel="shortcut icon" href="development.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Noto+Sans:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color:#FEF2F4;
+           /*code wriiten in it only*/
+        }
+        header{
+            position:sticky;
+            top:0;
+            z-index:999;
+            text-transform: capitalize;
+            font-size: large;
+            background-color:#fbafc2;
+            color: #4D4D4D;
+            font-family: 'Noto Sans', sans-serif;
+            width:100%;
+    
+        }
+        nav{
+            padding: 0 8%;
+            display:flex;
+            flex-direction: row;
+            width:100vw;
+            justify-content: center;
+            flex-wrap:nowrap;
+            height:8vh;
+            
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav ul{
+            display: flex;
+            list-style: none;
+            order:2;
+            flex-grow:2.25;
+            justify-content:space-evenly;
+            align-self:center;
+        }
+        ul li{
+            
+            float:left;
+        }
+        li:hover{
+            font-size: larger;
+            color:black;
+        }
+        nav img{
+            flex-shrink:0.75;
+            order:1;
+            align-self: flex-end;
+            
+        }   
+        .login{
+            padding-left:4%;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            order:3;
+            justify-content:flex-start;
+            column-gap: 2%;
+            flex-grow: 1.75;
+        }
+        .login button{
+            width:30%;
+            height:80%;
+            margin-right:6%;
+            color:#373737;
+            font-weight: bolder;            
+            text-transform: capitalize;
+            border-radius:6px;
+            cursor:pointer;
+        } 
+        .login button:hover{
+            height:84%;
+        }
+        .containgcenter{
+            width:80vw;
+            height:80vh;
+            margin:0 auto;
+            display:flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            background-color:inherit;
+            color:red;
+            align-items:center;
+            justify-content:center;
+            
+        }
+        .typedmessage{
+            display:inline-block;
+            text-align: center;
+            font-size: xxx-large;
+            font-weight: bolder;
+            font-family: 'Noto Sans', sans-serif;
+            color:#373737;  
+            display: block;
+        }
+        .typed-cursor{
+            display:inline;
+            background-color:#fbafc2 ;
+            height:4em;
+            
+        }
+        
+        .containgcenter button{
+            height:10%;
+            border-radius: 5px;
+            width:20%;
+            font-size:medium;
+            color:white;
+            background-color:#fbafc2;
+            text-align: center;
+            text-transform: capitalize;
+            cursor:pointer;
+            
+        }
+        .containgcenter button:hover{
+               width:22%;
+               height:10.5%;
+               font-size: large;
+               background-color:#FF6969;
+        }
+        .containgcenter p{
+            flex-basis:100%;
+            font-size:xx-large;
+            font-weight: bold;
+            color:#373737;
+            font-family: 'Noto Sans', sans-serif;
+            text-transform: capitalize;
+            text-align: center;
+        }
+        .smallheading{
+            width:80vw;
+            height:15vh;
+            margin:0 auto;
+            margin-top:20vh;
+            background-color:#454545;
+            color :white;
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding-top:2%;
+            text-transform: capitalize;
+            font-size:medium;
+            text-align: center;
+            font-family: 'Noto Sans', sans-serif;
+            align-items:space-evenly;
+            
+        }
+        .smallheading2{
+            width:95vw;
+            height:20vh;
+            margin:27vh auto;
+            color :#454545;
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding-top:2%;
+            text-transform: capitalize;
+            font-size:large;
+            text-align: center;
+            font-family: 'Noto Sans', sans-serif;
+            align-items:space-evenly;
+            
+        }
+        .smallflex img{
+            height:100%;
+            width:20%;
+        }
+        .smallheading2 p{
+            text-transform: uppercase;
+            font-size: large;
+            font-weight: bold;
+            order:-1;
+            width:100%;
+            height:30%;
+            margin-bottom:2vh;
+        }
+        .smallheading p{
+            text-transform: uppercase;
+            font-size: large;
+            font-weight: bold;
+            order:-1;
+            width:100%;
+        }
+        .smallflex{
+            padding-bottom: 2%;
+            display: flex;
+            justify-content: space-around;
+            align-items:center;
+            width:100%;
+        }
+        .smallflex button{
+            font-size:large;
+            color:#454545;
+            font-family: 'Noto Sans', sans-serif;
+            background-color:#F9F5F6;
+            width:20%;
+            height:100%;
+            border-radius:6px;
+            text-align: center;
+            text-transform: uppercase;
+            
+        }
+        .picturegrid{
+            display: grid;
+            width:85vw;
+            margin:10vh auto;
+            grid-gap:4px;
+            height:90vh;
+            grid-template-columns: auto auto auto;
+            background-color:#F9F5F6;
+        }
+        .item1{
+            background-image: url("Screenshot\ 2023-05-23\ 073509.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            }
+            .item2{
+                background-image: url("2.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .item3{
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url("3.png");
+                
+            }
+            .item4{
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url("4.png");
+            }
+            .item5{
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url("5.png");
+            }
+            .extend{
+                grid-row: 1/span 2;
+            }
+            .amazing{
+                background-image: url("https://prod.smassets.net/assets/content/sm/AudienceBG-NEW.png");
+                background-size: cover;
+                width:100vw;
+                margin:4vh 0vh;
+                height:80vh;
+                display: flex;
+                justify-content: center;
+                flex-wrap:wrap;
+                align-items: center;
+                background-repeat: no-repeat;
+            }
+            .amazing p{
+                flex-basis:100%;
+                text-align: center;
+                text-transform: capitalize;
+                padding:0.2% 0.75%;
+                width:100vw;
+                height:10vh;
+                box-sizing: border-box;
+                color:white;
+                font-size:x-large;
+                font-family: 'Noto Sans', sans-serif;
+            }
+            .amazing button{
+                color:#454545;
+                background-color:white;
+                border:2px solid #454545;
+                text-align:center;
+                text-transform: capitalize;
+                border-radius:2px;
+                width:20vw;
+                height:11vh;
+            }
+            .center{
+                height:50vh;
+                display: flex;
+                font-size:x-large;
+                font-family: 'Noto Sans', sans-serif;
+                text-transform: capitalize;
+                flex-wrap:wrap;
+                justify-content: center;
+                align-items: center;
+                text-align:center;
+                width:100vw;
+                line-height:2;
+            }
+            .capitalize{
+                font-size: xxx-large;
+                font-weight: bolder;
+                color:#454545;
+            }
+            .final-flex{
+                padding:10vh 0;
+                display: flex;
+                width:100vw;
+                flex-direction: row;
+                justify-content: space-evenly;
+                flex-wrap:wrap;
+            }
+            .flexed{
+                display:grid;
+                grid-template-columns: auto;
+                grid-template-rows: 60% 40%;
+                width:25vw;
+            height:80vh;
+            
+        }
+        .photo{
+            background-image: url("8.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .photo2{
+            background-image: url("9.png");
+        }
+        .photo3{
+            background-image: url("10.png");
+        }
+        .photo4{
+            background-image: url("https://prod.smassets.net/assets/content/sm/golden-state-warriors.png");
+        }
+        .photo5{
+            background-image:url("https://prod.smassets.net/assets/content/sm/blog-tile-card.png");
+        }
+        .photo6{
+            background-image: url("https://prod.smassets.net/assets/content/sm/help-center-tile.png");
+        }
+        .paragraph{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+            line-height:1.5;
+            font-size:x-large;
+            color:#454545;
+            font-family: 'Noto Sans', sans-serif;
+            text-transform: capitalize;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color:#4D4D4D;
+        }
+        nav ul li a:visited{
+               color:inherit;
+            }
+            .popup {
+    display: none;
+    position: fixed;
+    top: 20vh;
+    left:30vw;
+    width: 40vw;
+    height: 70vh;
+    background-color: #454545;
+    font-size: xx-large;
+    border-radius: 20px;
+    opacity: 100%;
+    font-family: 'Noto Sans', sans-serif;
+    
+}
+/* Style for the popup content */
+.popup-content {
+    text-transform: capitalize;
+    row-gap:4%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color:#fbafc2;
+    border-radius: 15px;
+    box-shadow: 2px 2px 7px #454545;
+    color:#454545;
+    width: 100%;
+    height:100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.popup-content > div{
+    width:100%;
+    height:40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+}
+.centered{
+    height:50%;
+    display:flex;
+    width:100%;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.centered h2{
+    font-size:x-large;
+    width:50%;
+}
+.pop:hover
+{   cursor: pointer;
+    background-color: #fbafc2;
+    opacity: 100%;
+}
+
+.popup-content button
+{   width:30%;
+    background-color: #454545;
+    color: white;
+    text-decoration: none;
+    border-radius:10px;
+    height:10%;
+    text-transform: capitalize;
+    font-family: 'Noto Sans', sans-serif;
+}
+.centered button{
+    height:50%;
+}
+.popup-content button:hover
+{   width:32%;
+    text-align:center;
+    background-color:#FF6969;
+    color:white;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+
+}
+a:visited{
+    color:inherit;
+}
+.yellow{
+    background-color:#FFB84C;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+              <img src="https://prod.smassets.net/assets/website/2.216.0/images/logo-surveymonkey.svg">
+            <ul>
+                 <li> <a href="homepage.html">Home</a></li>
+                 <li><a href="#">About</a></li>
+                 <li><a href="#">contact</a></li>
+                 <li><a href="#">product</a></li>
+            </ul>
+            <div class="login">
+            <button style="border:none; opacity:100%;background-color:#fbafc2"><a href="login.html
+                ">log in</a>
+                </button>
+            <button class="yellow" onclick="signup()">sign up</button>
+        </div>
+            <script>
+                function signup(){
+                    window.location.href="signup.html";
+                }
+            </script>
+        </nav>
+    </header>
+     <div class="containgcenter">
+         <span class="typedmessage">
+    </span>
+        <p> 
+            A global leader in survey software. 20 million questions answered daily.
+        </p>
+        <button id="mypopup" onclick="openPopup()">get started</button>
+     </div>  
+     <div id="myPopup" class="popup">
+        <div class="popup-content">
+            <h2>Sign-Up / Login</h2>
+            <p>SignUp / Login to your surveyour's account</p>
+            <div>
+                <div class="centered"><h2>Already a member</h2>
+                <button onclick="login()">Login</button></div>
+                <div class="centered">
+                    <h2>Not a member ?</h2>
+                    <button onclick="signup()">Sign-Up</button></div>
+                </div>
+             <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+      <script>
+        function login(){
+            location.assign("Login.html");
+        }
+        function signup(){
+            location.assign("Signup.html");
+        }
+        function openPopup() {
+            var popup = document.getElementById("myPopup");
+            popup.style.display = "block"; // Show the popup
+        }
+
+        function closePopup() {
+            var popup = document.getElementById("myPopup");
+            popup.style.display = "none"; // Hide the popup
+        }
+    </script>
+     <div class="smallheading">
+        <p>who is your service audience ?</p>
+       <div class="smallflex"><button>employees</button>
+        <button>customers</button>
+        <button>target market</button>
+        <button>others</button></div> 
+    </div>
+    <div class="picturegrid">
+        <div class="item1 extend"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item4"></div>
+        <div class="item5"></div>
+    </div>
+    <div class="smallheading2">
+        <p>Join more than 17 million active users worldwide</p>
+        <div class="smallflex">
+              <img src="https://prod.smassets.net/assets/content/sm/Allbirds-slate.png" alt="">
+              <img src="https://prod.smassets.net/assets/content/sm/Tweezerman-logo-2x.png" alt="">
+              <img src="https://prod.smassets.net/assets/content/sm/Adobe-logo-2x.png" alt="">
+              <img src="https://prod.smassets.net/assets/content/sm/Verizon-logo-2x.png" alt="">
+              <img src="https://prod.smassets.net/assets/content/sm/sephora-logo.png" alt="">
+        </div>
+    </div>
+    <div class="amazing">
+        <p>Looking for targeted responses to your surveys?<br/>
+            Get the responses you need in minutes with SurveyMonkey<br/> 
+            Audience, our trusted panel of more than 175 million respondents<br /> 
+            from across the globe.<br />
+        </p>
+        <button >learn more</button>
+    </div>
+    <div class="center"><p><span class="capitalize">Tools that spark business breakthroughs</span><br>
+        Discover specialized toolkits designed for your role and industry.</p></div>
+        <div class="final-flex">
+            <div class="flexed"><div class="photo"></div>
+            <div class="paragraph"><h2>Customer support</h2>
+
+                    <p> Provide better customer experiences while keeping your teams engaged.</p>
+                </div></div>
+                <div class="flexed"><div class="photo photo2"></div>
+                <div class="paragraph">
+                <h2>Human resources
+                   </h2>
+                <p> Retain your workforce by fostering a world-class employee experience.</p>
+                
+            </div></div>
+            <div class="flexed"><div class="photo photo3"></div>
+            <div class="paragraph">
+                <h2>Product management
+
+                    </h2>
+                <p>Build products that drive impact and offer a strong product-market fit.</p>
+            </div></div>
+            
+        </div>
+        <div class="center"><p><span class="capitalize">Still curious?</span><br />
+             Explore these additional resources to help you launch successful survey projects.</p></div>
+            <div class="final-flex">
+                <div class="flexed">
+                    <div class="photo photo4"></div>
+            <div class="paragraph">
+                <h3>Success Stories
+
+                    
+
+                    </h3>
+                <p>Read about our customers, explore our webinars, and get guides on collecting feedback in your industry.</p>
+            </div>
+                </div>
+                <div class="flexed">
+                    <div class="photo photo5"></div>
+            <div class="paragraph">
+                <h3>Blog
+
+                   
+                    </h3>
+                <p> Get tips on how to create better surveys, hear the latest product news, or check out our signature research.</p>
+            </div>
+                </div>
+                <div class="flexed">
+                    <div class="photo photo6"></div>
+            <div class="paragraph">
+                <h3>Help Center
+
+                    
+
+                    </h3>
+                <p>Access tutorials on how features work, learn more about billing, contact Customer Support, and more.</p>
+            </div>
+                </div>
+            </div>
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+     <script>
+        var typed=new Typed(".typedmessage",{
+            strings: ["What do you want to know?","Are my employees happy at work?","Will my product be a success or a flop?","Are my customers actually satisfied?","Do people like attending my events?"]  ,
+            typespeed:125,
+            backspeed:125,
+            loop:true 
+        })
+
+     </script> 
+</body>
+</html>
